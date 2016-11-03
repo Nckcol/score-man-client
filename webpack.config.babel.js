@@ -26,6 +26,12 @@ export default {
   devServer: {
     colors: true,
     contentBase: "./dist"
-  }
+  },
+  
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+  ]
 
 };
